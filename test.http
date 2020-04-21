@@ -1,0 +1,34 @@
+GET http://localhost:9091/artisansError2
+Accept: application/json
+
+###
+GET http://localhost:9091/artisans
+Accept: application/json
+
+###
+GET http://localhost:9091/artisansError
+Accept: application/json
+
+###
+
+###
+GET http://localhost:9091/artisansError3
+Accept: application/json
+
+###http://localhost:8080/artisan/interceptor/test 因为匹配到了拦截的规则，所以会被拦截
+GET http://localhost:9091/artisan/interceptor/test
+Accept: application/json
+
+###
+GET http://localhost:9091/artisan/interceptor/exclude/test
+Accept: application/json
+
+### 测试Fitler1
+http://localhost:9091/artisan/interceptor/test?name=artisan
+Accept: application/json
+
+### 测试Fitler2
+http://localhost:9091/artisan/interceptor/test?name=artisan
+Accept: application/json
+
+###

@@ -20,4 +20,9 @@ public class ArtisanServiceImpl implements ArtisanService {
 		return artisanMapper.selectArtisan();
 	}
 
+	@Override
+	public List<Artisan> getArtisanErrorList() {
+		return artisanMapper.selectErrorArtisan();
+	}
+
 }

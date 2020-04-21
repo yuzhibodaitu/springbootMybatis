@@ -1,10 +1,13 @@
+server:
+  port: 9091
+
 # datasource
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver # JDBC连接Mysql6以上com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/artisan?serverTimezone=UTC&useUnicode=true&characterEncoding=utf8&useSSL=false
     username: root
-    password: root
+    password: mysql
 
 #mybatis    
 mybatis:

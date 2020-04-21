@@ -5,6 +5,8 @@ import java.util.List;
 import org.apache.ibatis.annotations.Mapper;
 
 import com.artisan.model.Artisan;
+import org.apache.ibatis.annotations.Select;
+
 /**
  * 
  * @author yangshangwei
@@ -19,5 +21,9 @@ public interface ArtisanMapper {
 	 *  查询全部数据
 	 */
 	List<Artisan> selectArtisan();
+
+	@Select("select id,name,sex1 form artisan")
+	List<Artisan> selectErrorArtisan();
+
 	
 }
